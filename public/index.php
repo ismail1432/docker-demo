@@ -14,5 +14,7 @@ if(!empty($langages)) {
 }
 else {
     echo "<h2>No langages</h2>";
-    echo '<a href="?create">Create Data ?</a>';
+    echo '<p><a href="?database">Create DataBase ?</a></p>';
+    echo '<p><a href="?create">Create Data ?</a></p>';
+
 }
