@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+
+    web:
+        image: nginx:1.13.9
+        depends_on:
+            - php
+
+    php:
+        build: docker/php
+        depends_on:
+            - mydockersql
+
+    mydockersql:
+        image: mysql:5.7
+
+    tools:
+        build: docker/tools
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: phpmyadmin
+        environment:
+         - PMA_ARBITRARY=1
+        restart: always
+        ports:
+         - 8080:80
+        volumes:
+         - /sessions

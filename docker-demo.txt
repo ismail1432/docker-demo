@@ -1,0 +1,21 @@
+SQL
+#Access to container SQL alias is mydockersql
+docker-compose run mydockersql mysql -h mydockersql -u root -p
+#password = dockpwd
+show databases;
+use docker-demo;
+CREATE TABLE `docker_demo`.`langage` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(15) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+INSERT INTO `langage` (`id`, `name`) VALUES (NULL, 'php'), (NULL, 'java'), (NULL, 'javascript'), (NULL, 'ruby'), (NULL, 'c');
+
+PHP ECHO
+docker-compose run --rm tools php -r 'echo "Hello Docker!\n";'
+
+DOCKER INSPEC FORMAT
+
+docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'
+
+INSTALL Angular 
+
+docker-compose run --rm tools npm install -g angular-cli
+
