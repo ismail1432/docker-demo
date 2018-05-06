@@ -62,9 +62,9 @@ It will ask a password, enter :
 
 ``dockpwd`` 
 
-There is no magic the password was defined [here](https://github.com/ismail1432/docker-demo/blob/master/docker-compose.override.yaml#L23) feel free to change it but don't forget to run ``docker-compose up -d`` again and update [connexion.php](https://github.com/ismail1432/docker-demo/blob/master/public/connexion.php#L6)
+There is no magic the password was defined [here](https://github.com/ismail1432/docker-demo/blob/master/docker-compose.override.yaml#L23) feel free to change it but don't forget to run ``docker-compose up -d`` again and update [connexion.php](https://github.com/ismail1432/docker-demo/blob/master/public/connexion.php#L6).
 
-the database already exits defined [here](https://github.com/ismail1432/docker-demo/blob/master/docker-compose.override.yaml#L25)
+The database already exits, defined in[here](https://github.com/ismail1432/docker-demo/blob/master/docker-compose.override.yaml#L25)
 
 Create table and data :
 
@@ -78,6 +78,7 @@ exit;
 ##### 7- Try our web server
 
 We defined port 1001 [here](https://github.com/ismail1432/docker-demo/blob/master/docker-compose.override.yaml#L7) so you can see the ``index.php`` script at [localhost:1001](http://localhost:1001).
+
 You should see ![script php](images/php-app.png?raw=true "hello from PHP")
 
 Our script is connect with our database, feel free to remove any langage and go in you MySQL container to see if It deletes or not the selected langage.
@@ -96,7 +97,9 @@ Now check the container PHP version :
 
 ``docker-compose run tools php -v`` 
 
-You should see ![no container image](images/php-version.png?raw=true "No container")
+You should see
+
+![no container image](images/php-version.png?raw=true "No container")
 
 If you have CLI PHP compare your version with it
 
