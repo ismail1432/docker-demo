@@ -77,7 +77,9 @@ exit;
 
 ##### 7- Try our web server
 
-We defined port 1001 [here](https://github.com/ismail1432/docker-demo/blob/master/docker-compose.override.yaml#L7) so you can see the ``index.php`` script at [localhost:1001](http://localhost:1001).
+Configure the vhost.conf file in docker/nginx directory. Change line 7 /var/www/html/docker-demo/public/ to /path/to/docker-demo/public/
+
+then remerber that we defined port 1001 [here](https://github.com/ismail1432/docker-demo/blob/master/docker-compose.override.yaml#L7) so you can see our application at [localhost:1001](http://localhost:1001).
 
 You should see ![script php](images/php-app.png?raw=true "hello from PHP")
 
@@ -112,7 +114,7 @@ Now say hello from Docker container :
 
 Check NPM version
 
-``docker-compose run tools npm -v``
+``docker-compose run tools npm -v`
 
 ##### 9- Access to phpMyAdmin
 
